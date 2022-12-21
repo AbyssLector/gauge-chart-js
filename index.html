@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smart Fishing</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-light topbar mb-4 static-top shadow ">
+
+                    <div class="container justify-content-center">
+                        <a href="index.html" class="text-decoration-none text-gray-800" style="margin-right: -120px;">
+                            <h1>Smart Fishing Kolam Kajar Batu</h1>
+                        </a>
+                    </div>
+
+                    <div class="dropdown h5">
+                        <button class="dropbtn">Histori</button>
+                        <div class="dropdown-content">
+                            <a href="history_day.html">24 Jam</a>
+                            <a href="history_week.html">7 Hari</a>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Kolam 1</h1>
+                </div>
+
+                <!-- Kolam 1 -->
+                <div class="row justify-content-center">
+
+                    <!-- Suhu Air -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-danger text-uppercase text-center">
+                                        Suhu Air (°C)</div>
+                                    <canvas id="kolam_1_suhu_air_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pH -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-secondary shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-secondary text-uppercase text-center">
+                                        pH</div>
+                                    <canvas id="kolam_1_ph_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Turbidity -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-primary text-uppercase text-center">
+                                        Kekeruhan (NTU)</div>
+                                    <canvas id="kolam_1_turbidity_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Suhu Udara  -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-info shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-info text-uppercase text-center">
+                                        Suhu Udara (°C)</div>
+                                    <canvas id="kolam_1_suhu_udara_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kelembapan Udara -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-warning text-uppercase text-center">
+                                        Kelembapan (RH)</div>
+                                    <canvas id="kolam_1_kelembapan_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Kolam 2</h1>
+                </div>
+
+                <!-- Kolam 2 -->
+                <div class="row justify-content-center">
+
+                    <!-- Suhu Air -->
+                    <div class="col-xl-2 mb-4">
+                        <div class="card border-left-danger shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-danger text-uppercase text-center">
+                                        Suhu Air (°C)</div>
+                                    <canvas id="kolam_2_suhu_air_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pH -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-secondary shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-secondary text-uppercase text-center">
+                                        pH</div>
+                                    <canvas id="kolam_2_ph_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Turbidity -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-primary text-uppercase text-center">
+                                        Kekeruhan (NTU)</div>
+                                    <canvas id="kolam_2_turbidity_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kadar Oksigen Terlarut -->
+
+                    <!-- Suhu Udara  -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-info shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-info text-uppercase text-center">
+                                        Suhu Udara (°C)</div>
+                                    <canvas id="kolam_2_suhu_udara_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kelembapan Udara -->
+                    <div class="col-xl-2 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow py-2">
+                            <div class="card-body">
+                                <div class="no-gutters align-items-center">
+                                    <div class="col h5 font-weight-bold text-warning text-uppercase text-center">
+                                        Kelembapan (RH)</div>
+                                    <canvas id="kolam_2_kelembapan_canvas" width="400" height="400"
+                                        style="margin-top: -20%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; IT ITS Abmas</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="package/dist/chart.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/custChart.js"></script> -->
+
+</body>
+
+</html>

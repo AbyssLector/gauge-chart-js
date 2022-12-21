@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+
+    <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Custom styles for this template-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-light topbar mb-4 static-top shadow ">
+
+                    <div class="container justify-content-center">
+                        <a href="index.html" class="text-decoration-none text-gray-800" style="margin-right: -120px;">
+                            <h1>Smart Fishing Kolam Kajar Batu</h1>
+                        </a>
+                    </div>
+
+                    <div class="dropdown h5">
+                        <button class="dropbtn">Menu</button>
+                        <div class="dropdown-content">
+                            <a href="index.html">Home</a>
+                            <a href="history_day.html">24 Jam</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid text-center">
+
+                <div class="container">
+                    <div class="row" style="margin-top: -20px;">
+                        <div class="p-3 col">
+                            <button id="btn_kolam1" type="button"
+                                class="btn btn-secondary font-weight-bold text-uppercase"
+                                onclick="call_from_db(1);">Kolam
+                                1</button>
+                        </div>
+                        <div class="p-3 col">
+                            <button id="btn_kolam2" type="button"
+                                class="btn btn-secondary font-weight-bold text-uppercase"
+                                onclick="call_from_db(2);">Kolam
+                                2</button>
+                        </div>
+                    </div>
+                    <h1 class="h3 mb-0 text-gray-800 mb-3">Histori dalam 7 hari terakhir</h1>
+
+                    <div id="chart"></div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between my-4">
+                        <h1 class="h3 mb-0 text-gray-800">Rata-rata</h1>
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <!-- Suhu air -->
+                        <div class="col mb-4">
+                            <div class="card border-left-danger shadow py-2">
+                                <div class="card-body">
+                                    <div class="no-gutters align-items-center">
+                                        <div class="font-weight-bold text-danger text-uppercase text-center">
+                                            Suhu Air</div>
+                                        <div id="avg_suhu_air"
+                                            class="font-weight-bold text-uppercase text-center text-gray-800">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pH -->
+                        <div class="col mb-4">
+                            <div class="card border-left-secondary shadow py-2">
+                                <div class="card-body">
+                                    <div class="no-gutters align-items-center">
+                                        <div class="font-weight-bold text-secondary text-uppercase text-center">
+                                            PH</div>
+                                        <div id="avg_ph"
+                                            class="font-weight-bold text-uppercase text-center text-gray-800">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Turbidity -->
+                        <div class="col mb-4">
+                            <div class="card border-left-primary shadow py-2">
+                                <div class="card-body">
+                                    <div class="no-gutters align-items-center">
+                                        <div class="font-weight-bold text-primary text-uppercase text-center">
+                                            Kekeruhan</div>
+                                        <div id="avg_turbidity"
+                                            class="font-weight-bold text-uppercase text-center text-gray-800">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col mb-4">
+                            <div class="card border-left-info shadow py-2">
+                                <div class="card-body">
+                                    <div class="no-gutters align-items-center">
+                                        <div class="font-weight-bold text-info text-uppercase text-center">
+                                            Suhu Udara</div>
+                                        <div id="avg_suhu_udara"
+                                            class="font-weight-bold text-uppercase text-center text-gray-800">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col mb-4">
+                            <div class="card border-left-warning shadow py-2">
+                                <div class="card-body">
+                                    <div class="no-gutters align-items-center">
+                                        <div class="font-weight-bold text-warning text-uppercase text-center">
+                                            Kelembapan</div>
+                                        <div id="avg_kelembapan"
+                                            class="font-weight-bold text-uppercase text-center text-gray-800">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; IT ITS Abmas</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="package/dist/chart.min.js"></script>
+    <script src="js/history_week.js"></script>
+</body>
+
+</html>

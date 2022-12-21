@@ -1,0 +1,15 @@
+Sensor PH : Ph 4502-c
+sensor suhu air : ds18b20 waterproof
+sensor suhu udara : DHT11/DHT22
+sensor kelembaban udara : DHT11/DHT22
+sensor kadar oksigen terlarut : (blm dpt)
+Sensor kadar partikel padat terlarut : turbidity sensor
+
+Suhu air - pH - Turbidity kekeruhan - kadar oks terlarut
+Suhu udara - Kelembapan udara
+
+cron
+
+59 23 * * * curl --silent url
+
+CREATE TABLE `batukajar`.`kolam` ( `id` INT NOT NULL AUTO_INCREMENT , `kolam` TINYINT NOT NULL , `data_suhu_air` FLOAT NOT NULL , `data_ph` FLOAT NOT NULL , `data_suhu_udara` FLOAT NOT NULL , `data_turbidity` FLOAT NOT NULL , `data_kelembapan_udara` FLOAT NOT NULL , `created_at` TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
